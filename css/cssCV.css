@@ -1,0 +1,21 @@
+body{
+    margin: 200px 800px 200px 300px;
+     font-family: Arial;
+    line-height: 1.5; /* độ cao rộng*/
+    text-decoration: none; /*line-through: gạch giữa, underline, overline, none */
+    text-align: left;
+    color: #000000; /* 2 chỉ số cuối là alpha--> làm mờ */
+}
+h2{
+    font-style: bold;
+}
+h3{
+    font-style: bold;
+}
+p2{
+    font-style: italic;
+    text-align: center;
+}
+p1{
+    font-style: italic;
+}

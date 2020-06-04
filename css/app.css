@@ -1,0 +1,17 @@
+body{
+    background-image: url("../img/abstract-technology-particle-background_52683-25766.jpg");
+    background-repeat: no-repeat; /* khi gặp ảnh nhỏ sẽ không nhân ảnh */
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    font-size: 100px; /* cỡ chữ */
+    font-family: OpenSans;
+    font-weight: bold; /* có thể sử dụng số 100(light) 200 300 400(normal) 500 600 700(bold) 800 900*/
+    line-height: 1; /* độ cao rộng*/
+    text-decoration: none; /*line-through: gạch giữa, underline, overline, none */
+    text-align: center;
+    color: #ff112290; /* 2 chỉ số cuối là alpha--> làm mờ */
+    background-color: #7b68ee; /*màu nền*/
+    border-bottom: 1px solid #ff112299;
+}
