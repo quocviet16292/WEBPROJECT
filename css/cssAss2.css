@@ -21,7 +21,7 @@ header{
     font-size: 15px;
 }
 h3{
-    border:3px double palevioletred;
+    border:3px solid palevioletred;
     border-color: #ffffff;
     border-collapse: collapse;
     border-top-color: palevioletred;
