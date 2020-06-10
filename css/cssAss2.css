@@ -2,7 +2,7 @@ body{
     width: 23cm;
     height:29.7cm;
     margin: 10mm 20mm 10mm 20mm;
-    font-family: Arial;;
+    font-family: Arial;
  }
 img{
     float: left;
@@ -21,7 +21,7 @@ header{
     font-size: 15px;
 }
 h3{
-    border:3px solid palevioletred;
+    border:2px solid palevioletred;
     border-color: #ffffff;
     border-collapse: collapse;
     border-top-color: palevioletred;
