@@ -1,0 +1,28 @@
+body{
+    width: 25cm;
+    height: 25cm;
+    font-family: OpenSans;
+    background-color: #e7e6e6;
+}
+.part1{
+    width: calc(65% - 30px);
+    height:4cm;
+    background-color: red;
+    opacity: 60%;
+    border: 10px 10px 10px 20px;
+    color: white;
+    padding: 10px 50px 20px 15px;
+    margin: 2px solid white;
+    box-sizing: border-box;
+    float:left;
+}
+.part2{
+    width: 35%;
+    height: 10cm;
+    background-color: white;
+    float:right;
+}
+.post{
+    display: inline-block;
+    height: 16%;
+}
