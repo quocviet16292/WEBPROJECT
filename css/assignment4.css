@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body{
+    color: #4b7f76;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #e7e6e6;
+    line-height: 1.5;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.header,.main,.footer{
+    float:left;
+    width: 100%;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    background-color: white;
+    height: 80px;
+    color: black;
+}
+.header-left{
+    float:left;
+    width: 40%;
+}
+.header-center{
+    float:left;
+    width: 20%;
+    padding: 11px;
+}
+.header-right{
+    float:left;
+    width: 40%;
+    padding:20px;
+}
+.nav{
+    background-color: #2fdab8;
+}
+.item-list{
+    float: left;
+    width: 30%;
+}
+.menu li{
+    list-style: none;
+    float: left;
+    padding: 25px;
+}
+a:link{
+    color: #7d7777;
+    text-decoration: none;
+}
+a:visited{
+    color:black;
+    text-decoration: none;
+}
+a:hover{
+    color:black;
+    text-decoration: none;
+    font-weight: 800;
+}
+.round{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #2edab8;
+    position: relative;
+}
+#search{
+    border-radius: 300px;
+}
+.join{
+    display: inline-block;
+    background-color: #2edab8;
+     width: 60px;
+    height: 30px;
+    border-radius: 300px;
+    color:white;
+ }
+.nav-top{
+    height: 130px;
+    text-decoration: none;
+    text-align: center;
+    padding:30px;
+    font-weight: 200;
+}
+.nav-bottom{
+    height: 100px;
+    text-decoration: none;
+    text-align: center;
+    padding:30px;
+    font-weight: 200;
+    border: 0.5px solid darkgray;
+}
+.nav-bottom-sub{
+    float:left;
+    width:33.33%;
+    border-left: 0.5px solid darkgray;
+    border-collapse: collapse;
+}
+.item-list{
+    width: 100%;
+    height: 100px;
+    text-decoration: none;
+    text-align: center;
+    padding:10px;
+    font-weight: 200;
+    float:left;
+}
+.option{
+    width: 100%;
+    float:left;
+}
+.item-list-detail{
+    width: 30%;
+    background-color: white;
+    float:left;
+    height: 420px;
+    margin: 15px;
+}
+.before-item-list-detail-price{
+    background-color: white;
+    width:75%;
+    height: 50px;
+    float:left;
+}
+.item-list-detail-price{
+    background-color: #2edab8;
+    width: 25%;
+    height: 50px;
+    color:white;
+    float: right;
+    padding: 10px;
+}
+.item-list-detail-image{
+    width: 100%;
+    float:left;
+}
+.item-list-detail-buyer{
+    text-align: left;
+    padding-left: 20px;
+     width:100%;
+}
+.item-list-detail-buyer img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    float:left;
+    border: 3px solid white;
+    margin: 0 -28px 0 16px;
+}
+.item-list-detail-buyer-quantity{
+    font-size: 18px;
+    /*padding: 30px 20px;*/
+    margin: 7px 30px 0 40px;
+    float:left;
+}
