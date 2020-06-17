@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FORM</title>
+    <link rel="stylesheet" href="css/form.css"
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="top">
+                EVENT REGISTRATION FORM
+            </div>
+            <div class="content">
+                <div class="input-info">
+                    <div class="left-25">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="right-75">
+                        <div class="fname">
+                            <input type="text" name="Fname"><br>
+                            <span style="color: #cccccc;font-size: 0.9em;">First Name</span>
+                        </div>
+                        <div class="lname">
+                            <input type="text" name="Lname"><br>
+                            <span style="color: #cccccc;font-size: 0.9em;">Last Name</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-info">
+                    <div class="left-25">
+                        <label for="company">Company</label>
+                    </div>
+                    <div class="right-75">
+                        <input type="text" name="Company" style="width: 650px">
+                    </div>
+                </div>
+                <div class="input-info">
+                    <div class="left-25">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="right-75">
+                        <input type="text" name="Email" style="width: 650px">
+                    </div>
+                 </div>
+                <div class="input-info">
+                    <div class="left-25">
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="right-75">
+                        <div class="areacode">
+                            <input type="text" name="Phone" style="width: 150px;"><br>
+                            <span style="color: #cccccc;font-size: 0.9em;">Area Code</span>
+                        </div>
+                        <div class="phone">
+                            <input type="text" name="Phone" style="width: 450px"><br>
+                            <span style="color: #cccccc;font-size: 0.9em;">Phone Number</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-info">
+                    <div class="left-25">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="right-75">
+                        <form>
+                            <select name="subject" style="width: 650px">
+                                <option value="none">Choose Option</option>
+                                <option value="music">Music</option>
+                                <option value="magic">Magic</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="input-info">
+                    <span class="bottom">Are you an existing customer?</span>
+                    <form>
+                        <label for="checkid">
+                            <input type="radio" id="checkid1" name="checkid" value="Yes" checked>
+                        </label>
+                        <label for="checkid">
+                            <input type="radio" id="checkid2" name="checkid" value="No">
+                        </label>
+                    </form>
+                </div>
+                <div class="input-info">
+                    <form>
+                        <input type="register" value="REGISTER" id="register">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
