@@ -11,7 +11,7 @@ body{
     width: 1200px;
     height:1000px;
     position: relative;
-    background-image: linear-gradient(red,pink);
+    background-image: linear-gradient(#cb01cb, #1e90ff);
 }
 .form{
     width: 80%;
