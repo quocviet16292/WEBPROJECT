@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment7</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var Result = [];
+        var myChoice = [];
+        var num = parseInt(Math.random()*100);
+        Result.push(num);
+        for(let i=1; i<5; i++){
+            var num1 = parseInt(Math.random()*100);
+            for(let j=0; j<i; j++){
+                if(num1 == Result[j]){
+                    num1 = parseInt(Math.random()*100);
+                    j=0;
+                }
+            }
+            Result.push(num1);
+        }
+        console.log(Result);
+        Result.sort();
+        var num = parseInt(prompt("Chon so may man:"));
+        myChoice.push(num);
+        for(let i=1; i<5; i++) {
+            var num1 = parseInt(prompt("Chon so may man:"));
+            for (let j=0; j<i; j++) {
+                if (num1 == myChoice[j]) {
+                    i--;
+                }
+            }
+            myChoice.push(num1);
+        }
+        console.log(myChoice);
+        myChoice.sort();
+        for(let i=0; i<5; i++)
+            if(Result[i] != myChoice[i]){
+            alert("Chuc ban may man lan sau");
+        }else{
+            alert("Ban da chien thang");
+        }
+
+    </script>
+</body>
+</html>
