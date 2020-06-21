@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEMO</title>
+</head>
+<body>
+<!--    <script type="text/javascript">-->
+<!--        let obj = {-->
+<!--            name: "Nguyen Van A", //attribute-->
+<!--            age: 18,-->
+<!--            address: "8 Ton that thuyet",-->
+<!--            run: function () {-->
+<!--                console.log(this.name + " is running....");-->
+<!--            },-->
+<!--            girlfriend: [-->
+<!--                "Ngoc Trinh", "Phuong Trinh"-->
+<!--            ],-->
+<!--            // gotoHotel: function(){-->
+<!--            //     this.girlfriend.map(function (e) {-->
+<!--            //         console.log("Di Hotel voi " +e);-->
+<!--            //     })-->
+<!--            // },-->
+<!--            gotoHotel: function(){-->
+<!--                console.log("Di Hotel voi " +this.girlfriend);-->
+<!--            },-->
+<!--            children: {-->
+<!--                name: "Nguyen Van B",-->
+<!--                birthday: "22-09",-->
+<!--                children: {-->
+<!--                    name: "Nguyen Van C",-->
+<!--                    eat: function () {-->
+<!--                        console.log("Uong sua");-->
+<!--                        return this;-->
+<!--                    },-->
+<!--                    sleep: function () {-->
+<!--                        console.log("Di ngu...");-->
+<!--                        return this;-->
+<!--                    }-->
+<!--                }-->
+<!--            },-->
+<!--        };-->
+
+<!--        console.log(obj.name);-->
+<!--        obj.run();-->
+<!--        console.log("Ten cua con la: " + obj.children.name);-->
+<!--        console.log("Ten cua chau la: " + obj.children.children.name);-->
+<!--        obj.children.children.eat();-->
+<!--        obj.children.children.sleep();-->
+<!--        obj.children.children.eat().sleep();-->
+<!--        obj.gotoHotel();-->
+<!--    </script>-->
+<script type="text/javascript">
+    let $Class = {
+        Cname: "T2004E",
+        Room: "P08",
+        Teacher:{
+            Name: "Trinh Quang Hoa",
+            Age: 31,
+            Experience: "10 years",
+        },
+        StudentList: function{
+            $Class.Student = [];
+            let StudentInfo = {
+                Student[0]:{
+                    name: "Nguyen Van A01",
+                        sex: "Male",
+                        age: 18,
+                },
+                Student[1]:{
+                    name: "Nguyen Van A02",
+                        Sex: "Male",
+                        age: 18,
+                },
+            };
+            $Class.Student.map(function (e) {
+                    console.log("Danh sach tat ca sinh vien la: " + e.name);
+                }),
+        },
+        // StudentInfo:{
+        //     Student[0]:{
+        //         name: "Nguyen Van A01",
+        //         sex: "Male",
+        //         age: 18,
+        //     },
+        //     Student[1]:{
+        //         name: "Nguyen Van A02",
+        //         Sex: "Male",
+        //         age: 18,
+        //     },
+        // },
+    }
+    $Class.StudentList();
+
+
+</script>
+
+</body>
+</html>

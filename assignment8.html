@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang= en >
+<head>
+    <meta charset= UTF-8 >
+    <title>Title</title>
+</head>
+<body>
+    <div id="main">
+        <h2 id="city">Tên thành phố - quốc gia: </h2>
+        <h3 id="temp">Nhiệt độ: </h3>
+        <h3 id="press">Áp suất: </h3>
+        <h3 id="hum">Độ ẩm: </h3>
+        <h3 id="min_temp">Nhiệt độ thấp nhất: </h3>
+        <h3 id ="max_temp">Nhiệt độ cao nhất: </h3>
+        <h3 id="lvl">Mực nước biển: </h3>
+    </div>
+<script type="text/javascript">
+    var currentWeather = {
+        coord:{
+            lon:139.01,
+            lat:35.02
+        },
+        weather:
+            [
+                {
+                    id :800,
+                    main : "Clear" ,
+                    description : "clear sky , icon : 01n"
+                }
+            ],
+        base : "stations",
+        main :{
+            temp :285.514,
+            pressure :1013.75,
+            humidity :100,
+            temp_min :285.514,
+            temp_max :285.514,
+            sea_level :1023.22,
+            grnd_level :1013.75
+        },
+        wind :{
+            speed :5.52,
+            deg :311
+        },
+        clouds :{
+            all :0
+        },
+        dt :1485792967,
+        sys :{
+            message :0.0025,
+            country : " JP" ,
+            sunrise :1485726240,
+            sunset :1485763863
+        },
+        id :1907296,
+        name : "Tawarano",
+        cod :200
+    }
+    let h2 = document.getElementById("city");
+    h2.innerText = h2.innerText + " " + currentWeather.name + " " + currentWeather.sys.country;
+    let h3_temp = document.getElementById("temp");
+    let temperature = parseInt(currentWeather.main.temp) - 273.15;
+    h3_temp.innerText = h3_temp.innerText + " " + temperature.toFixed(0) + "°C";
+    let h3_press = document.getElementById("press");
+    h3_press.innerText = h3_press.innerText + " " + currentWeather.main.pressure + "Pa";
+    let h3_humidity = document.getElementById("hum");
+    h3_humidity.innerText = h3_humidity.innerText + " " + currentWeather.main.humidity + "%";
+    let h3_mintemp = document.getElementById("min_temp");
+    let mintemp = parseInt(currentWeather.main.temp_min) - 273.15;
+    h3_mintemp.innerText = h3_mintemp.innerText + " " + mintemp.toFixed(0) + "°C";
+    let h3_maxtemp = document.getElementById("max_temp");
+    let maxtemp = parseInt(currentWeather.main.temp_max) - 273.15;
+    h3_maxtemp.innerText = h3_maxtemp.innerText + " " + maxtemp.toFixed(0) + "°C";
+    let h3_level = document.getElementById("lvl");
+    h3_level.innerText = h3_level.innerText + " " + currentWeather.main.sea_level + "m";
+    let main = document.getElementById("main");
+    main.style.backgroundImage = "url('https://s32519.pcdn.co/wp-content/uploads/2019/12/towards-a-weather-proactive-supply-chain-hero-image-2272x960px.jpg.optimal.jpg')";
+    main.style.padding = "30px 60px";
+    main.style.color = "red";
+    h2.style.color = "blue";
+
+</script>
+</body>
+</html>

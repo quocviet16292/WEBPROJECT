@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS 3</title>
+</head>
+<body>
+    <h1 id="heading">Ten lop: </h1>
+    <h2 id="sub-heading"> Ten giao vien: </h2>
+    <h3>Danh sach Sinh Vien: </h3>
+    <ul id="student"></ul>
+    <script type="text/javascript">
+        let classobj = {
+            name: "T2004E",
+            room: "A8",
+            teacher:{
+                name: "Trinh Quang Hoa",
+                age: 32,
+            },
+            dssv: [
+                {
+                    name: "Nguyen A",
+                    age: 18,
+                },
+                {
+                    name: "Nguyen B",
+                    age: 18,
+                }
+            ],
+        };
+        let h1 = document.getElementById("heading");
+        // console.log(x.innerText);
+        // x.innerText = "Xin chao";
+        // x.style.color = "red";
+        // x.style.backgroundColor="Yellow";
+        // x.style.borderBottom = "5px green solid";
+        // x.innerHTML = "<i>"+x.innerText+"</i>";
+        h1.innerText = h1.innerText + classobj.name;
+        let h2_s1 = document.getElementById("sub-heading");
+        h2_s1.innerText=h2_s1.innerText + classobj.teacher.name;
+        let ul = document.getElementById("student");
+         classobj.dssv.map(function (e) {
+            let li = "<li><b>"+e.name+"</b><i>"+" --- So tuoi:"+ e.age +"</i></li>";
+            ul.innerHTML = ul.innerHTML + li;
+        })
+    </script>
+</body>
+</html>
