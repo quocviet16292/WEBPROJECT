@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Popup</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <button class="btn" onclick="popup()">Open Popup</button>
+    <div id="popup">
+        <img src="img/domain-300x225.jpg" alt="Missing picture">
+        <span id="close" onclick="closePopup()">X</span>
+    </div>
+    <div id="bg-fade"></div>
+
+<script type="text/javascript">
+    function popup() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("bg-fade").style.display = "block";
+        document.getElementById("close").style.display = "block";
+    }
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("bg-fade").style.display = "none";
+        document.getElementById("close").style.display = "none";
+    }
+</script>
+</body>
+</html>

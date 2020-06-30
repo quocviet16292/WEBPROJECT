@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" min="0" id="inputTime">
+    <span id="minute">10</span>:<span id="seconds">00</span>
+    <button onclick="startClock();">Start</button>
+    <script>
+        function startClock() {
+            // let min = 9;
+            // let sec = 59;
+            var min = parseInt(document.getElementById("minute").value);
+            if(isNaN(min)){
+                alert("Nhap lai");
+            }
+            var sec = parseInt(document.getElementById("seconds").value);
+            let clock = setInterval(function () {
+                document.getElementById("minute").innerText = (min>=10?min:"0"+min);
+                document.getElementById("seconds").innerText = (sec>=10?sec:"0"+sec);
+                // var min_txt= min>=10?min:"0"+min;
+                // var sec_txt = sec>=10?sec:"0"+sec;
+                sec--;
+                if(sec<0){
+                    min--;
+                    sec = 59;
+                }
+                if(min<0) clearInterval(clock);
+            },1000);
+
+        }
+    </script>
+</body>
+</html>

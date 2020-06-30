@@ -1,0 +1,33 @@
+.tabs{
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+}
+
+.tabs li{
+    float: left;
+    margin-right: 30px;
+}
+.content{
+    float: left;
+    width: 400px;
+    height: 200px;
+    border: 1px solid #cccccc;
+    overflow: hidden;
+}
+.content_all{
+    float: left;
+    width: 1600px;
+    height: 200px;
+    transition: all 300ms;
+}
+.tab_content{
+    float: left;
+    width: 400px;
+    height: 200px;
+}
+
+
+#home{
+    display: block;
+}

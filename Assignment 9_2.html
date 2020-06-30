@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/assignment92.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+<div class="container">
+    <div class="arrow leftarrow">
+        <a href="#" onclick="BackSlide(1);"><i class="fas fa-chevron-left"></i> </a>
+    </div>
+    <div class="sliderContainer">
+        <div class="slide">
+            <div class="imgholder trans" id="img1">
+                <img src="img/img1.jpg" alt="Missing Picture">
+            </div>
+            <div class="imgholder trans" id="img2">
+                <img src="img/img2.jpg" alt="Missing Picture">
+            </div>
+            <div class="imgholder trans" id="img3">
+                <img src="img/img3.jpg" alt="Missing Picture">
+            </div>
+            <div class="imgholder trans" id="img4">
+                <img src="img/img4.jpg" alt="Missing Picture">
+            </div>
+        </div>
+    </div>
+    <div class="arrow rightarrow">
+        <a href="#" onclick="NextSlide(1);"> <i class="fas fa-chevron-right"></i></a>
+    </div>
+
+</div>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+
+<script type="text/javascript">
+    let slides = document.getElementsByClassName("imgholder");
+    let dots = document.getElementsByClassName("dot");
+    let index = 1;
+
+    function TransSlide(n) {
+    	if(n>slides.length) index=1;
+    	if(n<1) index=slides.length;
+    	for(let i=0;i<slides.length;i++){
+    		slides[i].style.display = "none";
+    	}
+    	for(let i=0;i<dots.length;i++){
+    		dots[i].className = dots[i].className.replace(" active","");
+    	}
+    	slides[index-1].style.display = "block";
+    	dots[index-1].className += " active";
+    }
+    TransSlide(index);
+    function BackSlide(n){
+    	TransSlide(index -=n);
+    }
+    function NextSlide(n){
+    	TransSlide(index+=n);
+    }
+    function currentSlide(n){
+    	TransSlide(index=n);
+    }
+
+</script>
+</body>
+</html>

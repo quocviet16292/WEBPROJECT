@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 1200px;
+    height: 100vh;
+    color: #726767;
+}
+.nav{
+    width: 1200px;
+    height: 50px;
+}
+#home,#profile,#messages,#setting{
+    width: 100px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    border: 1px solid #ece6e6;
+    padding-top: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.nav div:hover{
+    background-color: #ece6e6;
+    cursor: pointer;
+}
+#right:hover{
+    background-color: white;
+}
+#right{
+    border-bottom: 1px solid #cccccc;
+    width: 780px;
+    height: 50px;
+    float: left;
+}
+#home{
+    border-bottom: none;
+}
+.content{
+    width: 1200px;
+    height: 300px;
+    border-bottom: 1px solid #cccccc;
+    padding: 20px;
+}
+#content1{
+    display: inline-block;
+    transition: all 1s
+}
+#content2{
+    display: none;
+    transition: all 1s;
+}
+#content3{
+    display: none;
+    transition: all 1s;
+}
+#content4{
+    display: none;
+    transition: all 1s;
+}
