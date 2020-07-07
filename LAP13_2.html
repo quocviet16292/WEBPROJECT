@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset= UTF-8 >
+    <title>Title</title>
+</head>
+<body>
+<select id="select">
+    <option value="Hanoi,vietnam">Hanoi</option>
+    <option value="Saigon,vietnam">Saigon</option>
+    <option value="haiphong,vietnam">haiphong</option>
+    <option value="London,uk">London</option>
+</select>
+<h1 id="city"></h1>
+<!--<h3 id="time"></h3>-->
+<!--<h3 id="temp"></h3>-->
+<!--<h3 id="des"></h3>-->
+<ul id="info"></ul>
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+    let api_url = "http://api.openweathermap.org/data/2.5/forecast";
+    $.ajax({
+        url: api_url,
+        method: "GET",
+        data:{
+            q:"Hanoi,vietnam",
+            appid:"09a71427c59d38d6a34f89b47d75975c",
+            units:"metric"
+        },
+        // success: function (rs) {
+        //     $("#city").text(rs.city.name);
+        //     $("#time").text(rs.list[0].dt_txt);
+        //     $("#temp").text(rs.list[0].main.temp);
+        //     $("#des").text(rs.list[0].weather[0].description);
+        // }
+        success: function (rs) {
+            $("#city").text(rs.city.name);
+            let ls = rs.list;
+
+            for(let i=0; i<ls.length;i++){
+                let li_html = "<li>" + ls[i].main.temp + " " + ls[i].dt_txt + "</li>";
+                $("#info").html($("#info").html() + li_html);
+            }
+        }
+
+    });
+    $("#select").bind("change",function () {
+        let value = $(this).val();
+        $.ajax({
+            url: api_url,
+            method: "GET",
+            data:{
+                q: value,
+                appid:"09a71427c59d38d6a34f89b47d75975c",
+                units:"metric"
+            },
+            success: function (rs) {
+                $("#city").text(rs.city.name);
+                let ls = rs.list;
+
+                for(let i=0; i<ls.length;i++){
+                    let li_html = "<li>" + ls[i].main.temp + " " + ls[i].dt_txt + "</li>";
+                    $("#info").html($("#info").html() + li_html);
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

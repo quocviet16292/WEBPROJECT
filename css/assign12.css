@@ -1,0 +1,6 @@
+.col-img-4 img{
+    height: 450px;
+    object-fit: cover;
+    background-size: cover;
+    overflow: hidden;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/menujquery.css">
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Products</a>
+            <ul class="submenu">
+                <li>Iphone</li>
+                <li>Nokia</li>
+                <li>Samsung</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Category</a>
+            <ul class="submenu">
+                <li>Iphone</li>
+                <li>Nokia</li>
+                <li>Samsung</li>
+            </ul>
+        </li>
+    </ul>
+<script type="text/javascript">
+    $(".menu > li").bind("mouseenter",function () {
+        $(".submenu").hide();
+        $(this).children(".submenu").slideDown(); //this la phan tu dang dc dua chuot vao
+    })
+    $(".menu > li").bind("mouseleave",function () {
+        $(".submenu").hide();
+    })
+</script>
+</body>
+</html>

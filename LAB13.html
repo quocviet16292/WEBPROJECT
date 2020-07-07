@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB13</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css"/>
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <h1>Dự báo thời tiết</h1>
+    <p id="time">Gio</p>
+    <script type="text/javascript">
+        for(var i=0; i<10; i++) {
+            var pptime = document.createAttribute('p');
+            pptime.setAttribute("id","time");
+        }
+        $.ajax({
+            url: "data1.json",
+            method: "POST",
+            type: "application/json",
+            success: function (rs) {
+                for(var i=0; i<10; i++) {
+                    $("#time").text(rs.list[i].dt_txt);
+                    $("#temp").text(rs.list[i].main.temp);
+                    $("#des").text(rs.list[i].weather[i].description);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

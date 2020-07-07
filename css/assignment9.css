@@ -8,8 +8,9 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
-    background-image: url("https://pngimage.net/wp-content/uploads/2018/06/fundo-ano-novo-png-1.png");
+    /*background-image: url("https://pngimage.net/wp-content/uploads/2018/06/fundo-ano-novo-png-1.png");*/
     background-size: cover;
+    background: linear-gradient(black 0.5, white 0.5);
 }
 
 .clock{
