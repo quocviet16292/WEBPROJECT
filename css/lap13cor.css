@@ -1,0 +1,30 @@
+body{
+    background-image: url("../img/img2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item{
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    background-color: rgba(16, 234, 234, 0.1);
+    padding: 20px;
+    margin: 15px 0;
+    position: relative;
+}
+.temp{
+    font-size: 35px;
+}
+.item .desc{
+    font-size: 16px;
+}
+.item img{
+    position: absolute;
+    top:40px;
+    right: 10px;
+    max-width: 100%;
+}
+#map{
+    width: 100%;
+    float: left;
+    height: 500px;
+}
